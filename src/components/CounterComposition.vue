@@ -6,28 +6,27 @@
 
 <script>
 //composition API, usamos ref para el control del estado
-    import { defineComponent, ref } from "vue"
-    export default defineComponent({
-        name:"CounterComposition",
-        setup() {
-            let counter = ref(0);
+import { defineComponent, ref } from "vue"
+export default defineComponent({
+    name: "CounterComposition",
+    setup() {
+        let counter = ref(0);
 
-            const addCounter = () => {
-                counter.value++
-            }
-
-            const decreaseCounter = () => {
-                counter.value--
-            }
-
-            return{
-                counter,
-                addCounter,
-                decreaseCounter
-            }
+        const addCounter = () => {
+            counter.value++
         }
-    })
+
+        const decreaseCounter = () => {
+            counter.value--
+        }
+
+        return {
+            counter,
+            addCounter,
+            decreaseCounter
+        }
+    }
+})
 </script>
 
-<style>
-</style>
+<style></style>

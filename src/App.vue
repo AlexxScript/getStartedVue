@@ -1,14 +1,11 @@
 <template>
-  <h1>Listado de posts</h1>
-  <CounterOption/>
-  <h2>Counter composition</h2>
-  <CounterComposition/>
+  <div class="">
+    <ClassBind />
+  </div>
 </template>
 
 <script setup>
-  import CounterOption from "./components/CounterOption.vue";
-  import CounterComposition from "./components/CounterComposition.vue";
+import ClassBind from "./components/ClassBind.vue";
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
