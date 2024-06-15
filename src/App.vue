@@ -1,11 +1,11 @@
 <template>
   <div class="">
-    <ClassBind />
+    <PrimeraPractica />
   </div>
 </template>
 
 <script setup>
-import ClassBind from "./components/ClassBind.vue";
+import PrimeraPractica from "./components/PrimeraPractica.vue";
 </script>
 
 <style scoped></style>
