@@ -1,11 +1,11 @@
 <template>
   <div class="">
-    <PrimeraPractica />
+    <PostList />
   </div>
 </template>
 
 <script setup>
-import PrimeraPractica from "./components/PrimeraPractica.vue";
+import PostList from "./components/PostList.vue";
 </script>
 
 <style scoped></style>
