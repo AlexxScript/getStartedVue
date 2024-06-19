@@ -1,11 +1,11 @@
 <template>
   <div class="">
-    <PostList />
+    <ComputedData />
   </div>
 </template>
 
 <script setup>
-import PostList from "./components/PostList.vue";
+import ComputedData from "./components/ComputedData.vue";
 </script>
 
 <style scoped></style>

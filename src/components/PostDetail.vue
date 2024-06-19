@@ -7,34 +7,47 @@
     </div>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue';
-export default defineComponent({
-    name:"PostDetail",
-    props: {
-        title:{
-            type:String,
-            required:true
-        },
-        content:{
-            type: String,
-            required: false,
-            default:"Este post no tiene contenido"
-        }
-    },
-    emits:["sayHi"],
-    setup(props,{emit}){
-        function handleClick () {
-            emit('sayHi',message.value)
-        }
-        let message = ref('')
-        return{
-            props,
-            handleClick,
-            message
-        }
-    }
-})
+<script setup>
+import { definProps, defineEmits, ref } from 'vue';
+
+const props = definProps({
+    title: String,
+    content: String
+});
+
+const emit = defineEmits(["sayHi"]);
+
+let message = ref('');
+
+const handleClick = () => {
+    emit("sayHi",message.value)
+}
+// export default defineComponent({
+//     name:"PostDetail",
+    // props: {
+    //     title:{
+    //         type:String,
+    //         required:true
+    //     },
+    //     content:{
+    //         type: String,
+    //         required: false,
+    //         default:"Este post no tiene contenido"
+    //     }
+    // },
+    // emits:["sayHi"],
+    // setup(props,{emit}){
+    //     function handleClick () {
+    //         emit('sayHi',message.value)
+    //     }
+    //     let message = ref('')
+    //     return{
+    //         props,
+    //         handleClick,
+    //         message
+    //     }
+    // }
+// })
 </script>
 
 <style scoped>
